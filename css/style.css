@@ -31,7 +31,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  background: --var(--white);
+  background: var(--white);
   color: var(--black);
   overflow-x: hidden; /* Убирает горизонтальный скролл */
   min-height: 100vh;
@@ -447,3 +447,4 @@ footer p {
 
 
 }
+
