@@ -2,6 +2,7 @@
 :root {
   --green: #538135;
   --yellow: #FFC000;
+  --yellow2: #ccaa43;
   --white: #f6f9f5;
   --black: #2d3a2d;
 }
@@ -31,7 +32,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  background: var(--white);
+  background: #f7f7f7;
   color: var(--black);
   overflow-x: hidden; /* Убирает горизонтальный скролл */
   min-height: 100vh;
@@ -109,6 +110,7 @@ section {
   }
 }
 
+
 /* Шапка */
 
 .header {
@@ -144,7 +146,7 @@ section {
   font-weight: 500;
   color: var(--white);
   text-transform: capitalize;
-  margin: 0 0.5rem; /* Уменьшено с 1rem до 0.5rem */
+  margin: 0 1rem; /* Уменьшено с 1rem до 0.5rem */
 }
 
 .header .navbar a:hover {
@@ -156,7 +158,7 @@ section {
   width: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  background: var(--light-bg);
+  background: var(--white);
   color: var(--black);
   cursor: pointer;
   text-align: center;
@@ -244,7 +246,7 @@ section {
 .banner {
   min-height: 80vh;
   width: 100%;
-  background: url('image/slide_3.png') center center/cover no-repeat;
+  background: url('/image/slide_3.png') center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,14 +256,31 @@ section {
 
 /* О нас на стартовой */
 
+.about-section {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    padding: 40px 28px 32px 28px;
+}
+
+ .about-content {
+    text-align: justify;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .about ul {
   margin-left: 3rem;
 }
 .about ul li {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
-
 
 /* Услуги */
 .services p {
@@ -313,8 +332,22 @@ section {
 }
 
 /* Другое */
+.other {
+  background: var(--yellow2);
+  height: 90vh;
+}
+
+.other h2 {
+  color: var(--white);
+}
+
+.other p {
+  color: var(--white);
+  text-align: center;
+} 
 
 .other-card {
+  width: 100%;
   background: var(--white);
   border-radius: 1rem;
   padding: 2rem 1rem;
@@ -328,11 +361,11 @@ section {
   justify-content: flex-start;
   transition: box-shadow 0.2s, transform 0.2s;
 }
-
+/* 
 .other-card:hover {
   box-shadow: 0 4px 16px rgba(83, 129, 53, 0.15);
   transform: translateY(-4px);
-}
+} */
 
 .other-icon {
   font-size: 4rem;
@@ -343,7 +376,20 @@ section {
 }
 
 /* Преимущества */
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center; /* Центрирование карточек */
+}
+
+/* .advantage-card {
+  flex: 1 1 300px; 
+  max-width: 350px;
+} */
 .advantage-card {
+  width: 100%;
   background: var(--white);
   border-radius: 1rem;
   padding: 2rem 1rem;
@@ -364,6 +410,15 @@ section {
   margin-top: 0.5rem;
   line-height: 1;
 }
+
+/* Старница Продукция */
+.products-section {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    padding: 40px 28px 32px 28px;
+} 
 
 
 
@@ -404,8 +459,7 @@ footer p {
   }
   .header #menu-btn {
     display: inline-block;
-    color: var(--white);
-  }
+    }
   .header .navbar {
     position: absolute;
     top: 99%;
@@ -432,12 +486,39 @@ footer p {
     min-height: 50vh;
     background-position: center;
   }
+  .advantages {
+    justify-content: center;
+  }
+  .advantage-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90vw;
+  }
+  .other-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90vw;
+  }
 }
 
 @media (max-width: 600px) {
   .banner {
     min-height: 35vh;
   }
+  .advantages {
+    justify-content: center;
+  }
+  .advantage-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90vw;
+  }
+  .other-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90vw;
+  }
+  
 }
 
 @media (max-width: 450px) {
@@ -445,6 +526,4 @@ footer p {
     font-size: 50%;
   }
 
-
 }
-
