@@ -632,12 +632,18 @@ footer p {
   .banner {
     min-height: 35vh;
   }
+  .product-card  {
+    flex-direction: column;
+  }
  
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .product-card  {
+    flex-direction: column;
   }
 
 }
